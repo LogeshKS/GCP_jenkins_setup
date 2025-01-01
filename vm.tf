@@ -8,6 +8,7 @@ resource "google_compute_instance" "jenkins_server" {
   boot_disk {
     initialize_params {
       image = var.jenkinsimage
+      size = 30
     }
   }
 
