@@ -1,6 +1,6 @@
 #firewall to allow http to jenkins from trusted ip
-resource "google_compute_firewall" "allow_http_jenkins" {
-    name = "allow-http-jenkins"
+resource "google_compute_firewall" "allow_ports_jenkins" {
+    name = "allow-firewall-jenkins"
     network = google_compute_network.jenkinsvpc.id
 
     allow {
