@@ -13,6 +13,7 @@ resource "google_compute_instance" "jenkins_server" {
 
   network_interface {
     subnetwork = google_compute_subnetwork.public_subnet.id
+    access_config {}
   }
 
   metadata_startup_script = file("/home/logesh/Devops/GCP_jenkins_setup/jenkinsstartup.sh")
