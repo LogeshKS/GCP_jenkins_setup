@@ -8,7 +8,7 @@ resource "google_compute_firewall" "allow_ports_jenkins" {
       ports = ["8080", "9090", "22", "9000", "80"]
     }
 
-    source_ranges = [google_compute_instance.jenkins_server.network_interface[0].network_ip]
+    source_ranges = ["0.0.0.0/0"]
     target_tags = var.jenkinstags
 
   depends_on = [ google_compute_instance.jenkins_server ]
