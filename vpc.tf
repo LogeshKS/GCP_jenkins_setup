@@ -5,6 +5,7 @@ resource "google_compute_network" "jenkinsvpc" {
     auto_create_subnetworks = "false"
     routing_mode = var.routing_mode
     mtu = var.mtu  
+    
 }
 
 resource "google_compute_subnetwork" "public_subnet" {
